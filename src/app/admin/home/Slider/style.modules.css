@@ -1,0 +1,73 @@
+.Company {
+  font-size: 1.5rem;
+}
+.CompanyCard {
+  color: white;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+.CompanyDiv {
+  gap: 3%;
+}
+
+@media only screen and (max-width: 800px) {
+  .CompanyCard p,
+  .Company {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 555px) {
+  .CompanyCard p,
+  .Company {
+    font-size: 0.7rem;
+  }
+  .CompanyCard {
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .CompanyCard p,
+  .Company {
+    font-size: 0.4rem;
+  }
+}
+
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+  background-color: #989394;
+}

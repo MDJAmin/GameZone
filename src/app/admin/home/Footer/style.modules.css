@@ -1,0 +1,80 @@
+footer {
+  padding: 0 5%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 3%;
+  height: 150px;
+  color: white;
+  background-color: rgb(20, 20, 20) !important;
+}
+footer span {
+  height: 100px;
+  width: 3px;
+  background-color: white;
+}
+.footerBrandName {
+  font-size: 24px;
+  width: fit-content;
+  display: flex;
+}
+.footerBrandName:hover {
+  color: #ff4553;
+}
+.qMenu {
+  width: 350px;
+  justify-content: space-between;
+}
+.qMenuItems {
+  width: fit-content;
+}
+.qMenuItems:hover {
+  color: #ff4553;
+}
+.icons {
+  font-size: 1.8rem;
+  color: rgb(208, 208, 208);
+}
+.icons:hover {
+  color: rgb(255, 255, 255);
+}
+@media only screen and (max-width: 900px) {
+  footer {
+    height: 500px;
+    flex-direction: column;
+    padding: 5% 0;
+  }
+  footer span {
+    height: 3px;
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 444px) {
+  footer {
+    justify-content: space-around;
+  }
+  footer span {
+    height: 3px;
+    width: 200px;
+  }
+  .qMenu {
+    width: 200px;
+    justify-content: space-around;
+  }
+  .footerBrands a {
+    margin: auto;
+  }
+  .footerBrands p {
+    font-size: 0.6rem;
+  }
+  .reserved {
+    font-size: 0.7rem;
+  }
+  .icons {
+    font-size: 1.3rem;
+  }
+  .qMenuItems {
+    font-size: 0.8rem;
+  }
+}

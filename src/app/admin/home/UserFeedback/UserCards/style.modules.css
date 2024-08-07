@@ -1,0 +1,21 @@
+.UserCardContainer {
+  margin-top: 5%;
+  gap: 80px;
+}
+.UserCard {
+  color: rgb(225, 233, 9);
+  width: 300px;
+  height: 230px;
+  background-color: #131112;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 400px) {
+  .UserCard {
+    width: 200px;
+    height: 150px;
+  }
+  .UserCard p {
+    font-size: 0.6em;
+  }
+}
