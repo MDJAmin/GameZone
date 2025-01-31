@@ -29,13 +29,19 @@ export default function Model() {
     };
 
     if (splineRef.current) {
-      splineRef.current.addEventListener("wheel", disableZoom);
+      splineRef.current.addEventListener(
+        "wheel",
+        disableZoom
+      );
     }
 
     return () => {
       window.removeEventListener("error", handleError);
       if (splineRef.current) {
-        splineRef.current.removeEventListener("wheel", disableZoom);
+        splineRef.current.removeEventListener(
+          "wheel",
+          disableZoom
+        );
       }
     };
   }, []);
@@ -63,10 +69,10 @@ export default function Model() {
   }, []);
 
   return (
-    <main className="mt-72 w-full">
+    <main className='mt-72 w-full'>
       <div>
         <h2
-          className="modelHeader text-4xl gap-2 flex justify-center"
+          className='modelHeader text-4xl gap-2 flex justify-center'
           ref={headerRef}
         >
           <span>Take</span>
@@ -78,7 +84,10 @@ export default function Model() {
           <span>Merch</span>
         </h2>
       </div>
-      <div className="ModelItem mt-4 pt-4" ref={splineRef}>
+      <div
+        className='ModelItem mt-4 pt-4'
+        ref={splineRef}
+      >
         {loading && (
           <div>
             <AdminLoading />
@@ -88,7 +97,7 @@ export default function Model() {
           <div>Error loading Spline scene: {error}</div>
         ) : (
           <Spline
-            scene="https://prod.spline.design/iZuhyFBKamgS9dEw/scene.splinecode"
+            scene='https://prod.spline.design/iZuhyFBKamgS9dEw/scene.splinecode'
             onLoad={() => setLoading(false)}
             onError={(e) => {
               setError(e.message);

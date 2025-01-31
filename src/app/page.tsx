@@ -3,12 +3,11 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 export default function WelcomePage() {
-    const textRef = useRef<HTMLParagraphElement>(null); // Ref for "WELCOME" text
-    const clickMeRef = useRef<HTMLAnchorElement>(null); // Ref for "Click Me!" text
+    const textRef = useRef<HTMLParagraphElement>(null);
+    const clickMeRef = useRef<HTMLAnchorElement>(null);
 
     useEffect(() => {
         if (textRef.current) {
-            // Intro animation for "WELCOME"
             gsap.fromTo(
                 textRef.current.children,
                 { opacity: 0, y: 10 },
@@ -33,7 +32,6 @@ export default function WelcomePage() {
                 }
             );
 
-            // Color animation for "WELCOME"
             gsap.to(textRef.current.children, {
                 color: () => gsap.utils.random(["#FF4553"]),
                 duration: 3,
@@ -41,12 +39,11 @@ export default function WelcomePage() {
                 yoyo: true,
                 stagger: 0.2,
                 ease: "sine.inOut",
-              });
-              
+            });
+
         }
 
         if (clickMeRef.current) {
-            // Intro animation for "Click Me!" with smoother, lower values
             gsap.fromTo(
                 clickMeRef.current.children,
                 { opacity: 0, y: 10 },
@@ -59,8 +56,8 @@ export default function WelcomePage() {
                     onStart: () => {
                         Array.from(clickMeRef.current!.children).forEach((letter) => {
                             gsap.to(letter, {
-                                y: () => gsap.utils.random(-3, 3), // Smoother and lower vertical movement
-                                x: () => gsap.utils.random(-2, 2), // Slight random horizontal shift
+                                y: () => gsap.utils.random(-3, 3),
+                                x: () => gsap.utils.random(-2, 2),
                                 duration: gsap.utils.random(1.5, 2.5),
                                 repeat: -1,
                                 yoyo: true,
@@ -71,7 +68,6 @@ export default function WelcomePage() {
                 }
             );
 
-            // Color animation for "Click Me!" with the same style as "WELCOME"
             gsap.to(clickMeRef.current.children, {
                 color: () => gsap.utils.random(["#FF4553"]),
                 duration: 3,
@@ -85,7 +81,6 @@ export default function WelcomePage() {
 
     return (
         <div className="flex flex-col h-screen items-center justify-center bg-gray-900">
-            {/* "WELCOME" as a normal p tag */}
             <p className="text-6xl font-bold flex space-x-2" ref={textRef}>
                 {"WELCOME".split("").map((letter, index) => (
                     <span key={index} className="inline-block">
@@ -94,7 +89,6 @@ export default function WelcomePage() {
                 ))}
             </p>
 
-            {/* "Click Me!" as an anchor (a) tag */}
             <a href="/admin/home" className="mt-10 text-3xl font-bold flex space-x-2" ref={clickMeRef}>
                 {"Click Me!".split("").map((letter, index) => (
                     <span key={index} className="inline-block cursor-pointer">
