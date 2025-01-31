@@ -26,32 +26,43 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="Hero" className="relative">
-      <div className="w-full relative">
+    <section
+      id='Hero'
+      className='relative'
+    >
+      <div className='w-full relative'>
         <Image
           src={HeroImg}
-          alt="Description"
-          className="select-none w-full"
+          alt='Description'
+          className='select-none w-full'
           height={"100%"}
         />
       </div>
-      <div ref={heroContentRef} id="HeroContent" className="z-10 px-[4rem]">
-        <p className="text-white text-sm sm:px-2 Discover">
+      <div
+        ref={heroContentRef}
+        id='HeroContent'
+        className='z-10 px-[4rem]'
+      >
+        <p className='text-white text-sm sm:px-2 Discover'>
           Discover new exciting games& play them anytime !
         </p>
-        <p id="HeroTitle" className="pb-4">
-          Start your <br /> <span className="text-[#FF4553]">gaming</span>{" "}
+        <p
+          id='HeroTitle'
+          className='pb-4'
+        >
+          Start your <br />{" "}
+          <span className='text-[#FF4553]'>gaming</span>{" "}
           <br />
           adventure today.
         </p>
-        <div className="AllBtn flex flex-wrap gap-4 sm:pt-4">
-          <a href="/admin/games">
-            <button className="bg-[#FF4553] rounded-sm text-white hover:bg-white hover:text-[#FF4553] transition-colors">
+        <div className='AllBtn flex flex-wrap gap-4 sm:pt-4'>
+          <a href='/admin/games'>
+            <button className='bg-[#FF4553] rounded-sm text-white hover:bg-white hover:text-[#FF4553] transition-colors'>
               Free trail
             </button>
           </a>
-          <a href="/admin/orders#Analyze">
-            <button className="bg-white rounded-sm text-black hover:text-[#FF4553] transition-colors">
+          <a href='/admin/orders#Analyze'>
+            <button className='bg-white rounded-sm text-black hover:text-[#FF4553] transition-colors'>
               Explore Top Games
             </button>
           </a>

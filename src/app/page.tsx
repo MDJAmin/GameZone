@@ -35,13 +35,14 @@ export default function WelcomePage() {
 
             // Color animation for "WELCOME"
             gsap.to(textRef.current.children, {
-                color: ["#FF4553", "#FFD700", "#00FF7F", "#00BFFF", "#FF69B4"],
+                color: () => gsap.utils.random(["#FF4553"]),
                 duration: 3,
                 repeat: -1,
                 yoyo: true,
                 stagger: 0.2,
                 ease: "sine.inOut",
-            });
+              });
+              
         }
 
         if (clickMeRef.current) {
@@ -72,7 +73,7 @@ export default function WelcomePage() {
 
             // Color animation for "Click Me!" with the same style as "WELCOME"
             gsap.to(clickMeRef.current.children, {
-                color: ["#FF4553", "#FFD700", "#00FF7F", "#00BFFF", "#FF69B4"],
+                color: () => gsap.utils.random(["#FF4553"]),
                 duration: 3,
                 repeat: -1,
                 yoyo: true,
