@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy:build": "npm run build && npm run deploy",
+    "homepage": "https://MDJAmin.github.io/GameZone"
   },
   "dependencies": {
     "@emotion/react": "^11.13.0",
